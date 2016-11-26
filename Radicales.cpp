@@ -74,6 +74,42 @@ int Radicales::encontrarDivisorComun()
 
 }
 
+void Radicales::operator+(Radicales& suma)
+{
+	if(this->denominador == suma.getDenominador())
+	{
+		numerador = numerador + suma.getNumerador();
+	}
+	else
+	{
+
+	}
+}
+
+void Radicales::operator-(Radicales& resta)
+{
+	if(this->denominador == resta.getDenominador())
+	{
+		numerador = numerador - resta.getNumerador();
+	}
+	else
+	{
+
+	}
+}
+
+void Radicales::operator*(Radicales& multiplicacion)
+{
+	numerador = numerador * multiplicacion.getNumerador();
+	denominador = denominador * multiplicacion.getDenominador();
+}
+
+void Radicales::operator/(Radicales& division)
+{
+	numerador = numerador * division.getDenominador();
+	denominador = denominador * division.getNumerador();
+}
+
 void Radicales:: imprimirFraccion()
 {
 	cout<<numerador<<endl<<"--------"<<endl<<denominador<<endl;

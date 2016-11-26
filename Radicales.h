@@ -21,4 +21,10 @@ class Radicales
 		void imprimirFraccion();
 		void SimplificarFraccion();
 		int encontrarDivisorComun();
+
+		//operadores sobrecargados
+		void operator+(Radicales&);
+		void operator-(Radicales&);
+		void operator*(Radicales&);
+		void operator/(Radicales&);
 };
