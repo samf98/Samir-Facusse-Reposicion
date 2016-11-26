@@ -74,19 +74,23 @@ int Radicales::encontrarDivisorComun()
 
 }
 
-int Radicales::encontrarMultiploComunMenor(int denominador_operador)
+/*int Radicales::encontrarMultiploComunMenor(int denominador_operador)
 {
+	int temp1 = 0;
+	int temp2 = 0;
 	int multiplo = 1;
-	int multiplo_encontrado = 1;
-	while(multiplo_encontrado == 1)
+	bool multiplo_encontrado = false;
+	while(multiplo_encontrado == false)
 	{
-		if((this->denominador * multiplo) == (denominador_operador * multiplo))
-			multiplo_encontrado = 0;
+		temp1 = this->denominador * multiplo;
+		temp2 = denominador_operador * multiplo;
+		if(temp1 == temp2)
+			multiplo_encontrado = true;
 		else
 			multiplo++;
 	}
 	return multiplo;
-}
+}*/
 
 Radicales Radicales::operator+(Radicales& suma)
 {
@@ -97,11 +101,11 @@ Radicales Radicales::operator+(Radicales& suma)
 	}
 	else
 	{
-		multiplo = encontrarMultiploComunMenor(suma.getDenominador());
-		this->denominador = this->denominador * multiplo;
-		this->numerador = (this->numerador * multiplo) + (suma.getNumerador() * multiplo);
+		multiplo = this->denominador;
+		this->denominador = this->denominador * suma.getDenominador();
+		this->numerador = (this->numerador * suma.getDenominador()) + (suma.getNumerador() * multiplo);
 	}
-	return Radicales(numerador,denominador);
+	return Radicales(numerador,this->denominador);
 }
 
 Radicales Radicales::operator-(Radicales& resta)
@@ -113,9 +117,9 @@ Radicales Radicales::operator-(Radicales& resta)
 	}
 	else
 	{
-		multiplo = encontrarMultiploComunMenor(resta.getDenominador());
-		this->denominador = this->denominador * multiplo;
-		this->numerador = (this->numerador * multiplo) - (resta.getNumerador() * multiplo);
+		multiplo = this->denominador;
+		this->denominador = this->denominador * resta.getDenominador();
+		this->numerador = (this->numerador * resta.getDenominador()) - (resta.getNumerador() * multiplo);
 	}
 	return Radicales(numerador,denominador);
 }

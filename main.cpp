@@ -101,6 +101,7 @@ void calculadora(Radicales* inicial)
 			*resultado = *inicial / *operador;
 		}
 		cout<<"Fracción resultante: "<<endl<<endl;
+		inicial -> SimplificarFraccion();
 		inicial -> imprimirFraccion();
 	}
 	else
