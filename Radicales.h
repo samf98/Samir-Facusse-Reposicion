@@ -19,4 +19,6 @@ class Radicales
 		void setDenominador(int);
 		int getDenominador();
 		void imprimirFraccion();
+		void SimplificarFraccion();
+		int encontrarDivisorComun();
 };
