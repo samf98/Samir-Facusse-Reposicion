@@ -85,6 +85,7 @@ void calculadora(Radicales* inicial)
 		inicial->imprimirFraccion();
 		cout<<"Fracción 2: "<<endl<<endl;
 		operador->imprimirFraccion();
+		cout<<endl<<endl;
 		if(op==1){
 			*resultado = *inicial + *operador;
 		}
@@ -103,6 +104,7 @@ void calculadora(Radicales* inicial)
 		cout<<"Fracción resultante: "<<endl<<endl;
 		inicial -> SimplificarFraccion();
 		inicial -> imprimirFraccion();
+		cout<<endl;<<endl;
 	}
 	else
 		cout<<"Denominador inválido, no se creo una segunda fracción."<<endl;
