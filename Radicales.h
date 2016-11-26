@@ -24,8 +24,8 @@ class Radicales
 		int encontrarMultiploComunMenor(int);
 
 		//operadores sobrecargados
-		Radicales* operator+(Radicales&);
-		Radicales* operator-(Radicales&);
-		Radicales* operator*(Radicales&);
-		Radicales* operator/(Radicales&);
+		Radicales operator+(Radicales&);
+		Radicales operator-(Radicales&);
+		Radicales operator*(Radicales&);
+		Radicales operator/(Radicales&);
 };
