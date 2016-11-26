@@ -90,7 +90,7 @@ int Radicales::encontrarDivisorComun()
 			multiplo++;
 	}
 	return multiplo;
-}*/ 
+}*/
 
 Radicales Radicales::operator+(Radicales& suma)
 {
