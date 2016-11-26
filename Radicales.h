@@ -5,18 +5,18 @@
 using std::cout;
 using std::endl;
 
-class Radical
+class Radicales
 {
 	private:
 		int numerador;
 		int denominador;
 
 	public:
-		Radical(int,int);
-		~Radical();
+		Radicales(int,int);
+		~Radicales();
 		void setNumerador(int);
 		int getNumerador();
-		void setDenominador();
+		void setDenominador(int);
 		int getDenominador();
 		void imprimirFraccion();
-}
+};
